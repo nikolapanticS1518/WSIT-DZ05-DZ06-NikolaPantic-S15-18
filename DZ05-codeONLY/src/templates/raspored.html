@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAFraspored</title>
+
+<style>
+tr:nth-child(even) {
+  background-color: #4dc1f7;
+}
+tr:nth-child(odd) {
+  background-color: #5a72fa;
+}
+</style>
+</head>
+<body>
+    <table border="1" style="border-collapse: collapse">
+        <tr>
+            <th>Predmet</th>
+            <th>Tip</th>
+            <th>Nastavnik</th>
+			<th>Grupe</th>
+            <th>Dan</th>
+            <th>Termin</th>
+			<th>Ucionica</th>
+        </tr>
+
+        {% for red in redovi %}
+       
+            
+            <tr>
+                    <td>{{red.split(',')[0]}}</td>
+                    <td>{{red.split(',')[1]}}</td>
+                    <td>{{red.split(',')[2]}}</td>
+					<td>{{red.split(',')[3]}}</td>
+					<td>{{red.split(',')[4]}}</td>
+					<td>{{red.split(',')[5]}}</td>
+					<td>{{red.split(',')[6]}}</td>
+                    
+            </tr>
+           
+        {% endfor %}
+ 
+    </table>
+		
+		<table border="0" style="margin-top: 10px; position: center; border-collapse: collapse">
+			
+			<th style="background: white">Nastavnik</th>
+            <th style="background: white;">Ucionica</th>
+			
+			{% for red in redovi %}
+			
+				<tr style="background: white">
+					<td>{{red.split(',')[2]}}</td>
+					<td>{{red.split(',')[6]}}</td>
+				</tr>
+			{% endfor %}
+		
+		</table>
+		
+</body>
+</html>

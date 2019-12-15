@@ -1,0 +1,15 @@
+<html>
+	<head>
+		<title> RAFraspored </title>
+	</head>
+	<body>
+		{% block body %}
+			Pretraga: <input type="text" id="search" placeholder="pretrazi"/>
+			{{ table|safe }}
+		{% endblock %}	
+		
+		<h3> Raspored original: </h3>
+		
+	</body>
+	{% extends "raspored.html" %}
+</html>

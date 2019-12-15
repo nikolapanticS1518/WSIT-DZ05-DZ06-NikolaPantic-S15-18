@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title> Home Page </title>
+	</head>
+	<body>
+		
+		{% block body %}
+			Pretraga: <input type="text" id="search" placeholder="type to search"/>
+			{{ table|safe }}
+		{% endblock %}
+	</body>
+	{% extends "raspored.html" %}
+</html>
